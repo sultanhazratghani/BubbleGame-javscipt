@@ -1,4 +1,7 @@
-var timer=61;
+var timer=60;
+var score = 0;
+var hitVal=0;
+
 function makeBubble(){
     var container = "";
 
@@ -9,14 +12,27 @@ for(var i=1; i<=180;i++){
 document.querySelector("#pbot").innerHTML= container;
 
 }
+function click(){
+    document.querySelector("#pbot").addEventListener("click",function(detail){
+             var clickedNumber =(Number(detail.target.textContent));
+             if(clickedNumber===hitVal){
 
-function getNewHit(){
+                incScore();
+                makeBubble();
+                getNewHit();
+            }else {makeBubble();}
+
+    });
+    
     
 }
-var score;
+function getNewHit(){
+  hitVal= Math.floor(Math.random()*10)
+  document.querySelector("#hitVal").textContent = hitVal   
+}
 function incScore(){
-    score += 20;
-    document.querySelector("#scoreval").innerHTML = score;
+    score += 10;
+    document.querySelector("#scoreval").textContent = score;
 
 }
 
@@ -29,13 +45,18 @@ function setTimer(){
             document.querySelector("#timerValue").textContent=timer;
 
         }else{
-            
             clearInterval(a);
-          
+            document.querySelector("#pbot").innerHTML = `<h1> Game over:</h1> 
+            </br> <h1>your score is ${score}</h1>`
+            
         }
        
     },1000)
 }
-makeBubble();
+function all(){
+    makeBubble();
 setTimer();
-incScore();
+click();
+getNewHit();
+}
+all();

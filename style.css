@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    height:100%;
+    width: 100%;
+}
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width:100%;
+    background-color: rgb(92, 195, 155);
+}
+#panel{
+    overflow:hidden;
+    height:70%;
+    width:80%;
+    border-radius: 7px;
+    background-color: rgb(252, 252, 252);
+    border-style:solid;
+    border-color:balck;
+}
+#ptop{
+    display: flex;
+    padding:0px 30% ;
+    align-items: center;
+    justify-content:space-between;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(53, 144, 106);
+}
+
+.box{
+    
+    height:40px;
+    width: 35px;
+    color: rgb(0, 1, 0);
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(104, 210, 175);
+   
+}
+.elem{
+    color:aqua;
+    display:flex;
+    align-items: center;
+    gap: 20px;
+}
+.elem:hover{
+    color: rgb(24, 203, 203);
+    cursor: pointer;
+}
+
+.bubble{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width:30px;
+    border-radius:50px;
+    background-color: rgb(53, 144, 106)
+}
+.bubble:hover{
+    color: rgb(232, 243, 171);
+    background-color: rgb(40, 144, 40);
+    cursor: pointer;
+}
+#pbot{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+    height: calc(100% - 50px);
+    width: 100%;
+    gap: 5px;
+    
+}
+#h{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    font-family: serif;
+    font-weight: bolder;
+    
+}
+#h:hover{
+    
+    background-color: rgb(15, 230, 215);
+}
+.box:hover{
+    color: rgb(120, 170, 120);
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
